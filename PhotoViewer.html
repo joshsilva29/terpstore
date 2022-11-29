@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="code.js" defer></script>
+    </head>
+    <body>
+        <div id="document">
+            <h1>Photo Viewer</h1>
+            <div id="photo-section">
+                <img id="photo" src="InitialImage.jpg">
+            </div>
+            <fieldset class="section">
+                <legend>Loading Data</legend>
+                <div class="loading-input">
+                    <div class="loading-text">Photos' Folder: </div>
+                    <input type="text" id="folder-text" value="">
+                    <div class="loading-text">Common Name: </div>
+                    <input type="common" id="common-text" value="">
+                </div>
+                <div class="loading-input">
+                    <div class="loading-text">Start Photo Number: </div>
+                    <input type="text" id="start-photo" value>
+                    <div class="loading-text">End Photo Number: </div>
+                    <input type="common" id="end-photo" value>
+                </div>
+                <button id="load-photos" type="button" onclick="loadPhotos()">Load Photos</button>
+            </fieldset>
+            <fieldset class="section">
+                <legend>Iterating</legend>
+                <button id="previous-photo" onclick="previousPhoto()">Previous Photo</button>
+                <button id="next-photo" onclick="nextPhoto()">Next Photo</button>
+                <button id="first-photo" onclick="firstPhoto()">First Photo</button>
+                <button id="last-photo" onclick="lastPhoto()">Last Photo</button>
+            </fieldset>
+            <fieldset class="section">
+                <legend>SlideShows</legend>
+                <button id="slideshow" onclick="slideshow()">SlideShow</button>
+                <button id="random-slide" onclick="randomSlideshow()">RandomSlideShow</button>
+                <button id="stop-slide" onclick="stopSlideshow()">StopSlideShow</button>
+            </fieldset>
+            <fieldset class="section">
+                <legend>Status</legend>
+                <div class="loading-input">
+                    <div>Photo Being Displayed: </div>
+                    <input type="text" id="displayed-photo" value="InitialImage.jpg" disabled>
+                </div>
+                <div id="photo-viewer-system">Photo Viewer System</div>
+            </fieldset>
+        </div>
+    </body>
+</html>
